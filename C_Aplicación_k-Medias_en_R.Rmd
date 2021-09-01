@@ -240,7 +240,7 @@ leaflet(subdata1773) %>% addTiles() %>%
 
 ### Ahora se representan los clusters de 1698 en rojo y los de 1773 en azul
 ```{r}
-pal <- colorFactor(palette= rainbow(2), domain = c(1:2))
+pal <- colorFactor(palette= rainbow(3), domain = c(1:3))
 leaflet(subdata1698) %>% addTiles() %>%
     addCircleMarkers(lng = ~coords1698$Longitud,
              lat = ~coords1698$Latitud,
@@ -254,7 +254,7 @@ leaflet(subdata1698) %>% addTiles() %>%
   addCircleMarkers(lng = ~coords1773$Longitud,
              lat = ~coords1773$Latitud,
              weight = 5,
-             col= ~pal(2),
+             col= ~pal(3),
              label = c(1:ncentros1773),
              labelOptions = labelOptions(noHide = F, textOnly = FALSE),
              fillOpacity = 0.25,
@@ -273,7 +273,7 @@ leaflet(subdata1698) %>% addTiles() %>%
   addCircles(lng = ~subdata1773$Longitud,
              lat = ~subdata1773$Latitud,
              weight = 2,
-             color = ~pal(2),
+             color = ~pal(3),
              opacity = 1,
              fillOpacity = 1) %>%
   addLabelOnlyMarkers(lng = ~subdata1773$Longitud,
