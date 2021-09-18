@@ -19,8 +19,8 @@ La variable `dirección` contiene la ruta al archivo de datos del censo estructu
 ```{r}
 # Cámbiese la `dirección` por la que corresponda al archivo 'GeolocLocalidades.tsv' en su propio ordenador. En Github, este archivo se encuentra en la carpeta 'Documentos'.
 dirección <- './Privado/GeolocLocalidadesTOTAL.tsv'
-data <- read.table(file = dirección, sep = '\t', header = TRUE)
-data <- data.frame(Nombre=data$Nombre, Año=data$Año, Localidad=data$Localidad.1, Latitud=data$Latitud.1, Longitud=data$Longitud.1)
+data <- read.table(file = dirección, sep = '\t', header = TRUE, stringsAsFactors = FALSE)
+data <- data.frame(Nombre=data$Nombre, Año=data$Año, Localidad=data$Localidad.1, Latitud=data$Latitud.1, Longitud=data$Longitud.1, stringsAsFactors = FALSE)
 ```
 
 
