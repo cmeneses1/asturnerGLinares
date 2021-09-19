@@ -1,7 +1,7 @@
 # asturnerGLinares
 Código para la resolución del problema NER y extracción automática de información en un censo de linajes asturianos. Para ejecutar este código es necesario tener instaladas las librerías siguientes:
 - Python 3
-- _Jupyter_.
+- _Jupyterlab_
 - [SpaCy](https://spacy.io/)
 - [Stanza](https://stanfordnlp.github.io/stanza/#getting-started)
 - [spacy-stanza](https://spacy.io/universe/project/spacy-stanza)
