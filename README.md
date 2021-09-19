@@ -46,4 +46,4 @@ El *notebook* de *R*, `C_Aplicación_k-Medias_en_R.Rmd`, sirve para la aplicaci�
 Los *notebooks* cuyo título empiezan por *Z_* no están pensados para ejecutarse independientemente como `A_...`, `B_...` y `C_...`. Por el contrario, están pensados para albergar funciones y variables de ayuda necesarias para el uso de `A_Procesar_Guardar.ipynb` y `B_Añadir_Etiquetas.ipynb`.
 
 ## Resultados
-Si se ejecuta el código de este repositorio para todo el censo al completo, se puede obtener una lista de datos estructurados en formato TSV con más de 3800 entradas.
+Si se ejecuta el código de este repositorio para todo el censo al completo, se puede obtener una lista de datos estructurados en formato TSV con más de 3600 entradas.
