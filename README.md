@@ -40,7 +40,7 @@ Una vez se ha logrado la extracción de los datos, se dispone de una tabla con d
 - Gelocalización de la localidad 1.
 - Hasta otras dos localidades más (porque a veces los individuos del censo vienen agrupados en tres localidades al mismo tiempo, por ejemplo: "CABO, FURADA Y RUBIEIRO").
 
-El *notebook* de *R*, `C_Aplicación_k-Medias_en_R.Rmd`, sirve para la aplicación del algoritmo de k-Medias aplicado a un apellido concreto. Ejecuta k-Medias para las entradas correspondiente a 1698 y las de 1773. Además, compara los *clusters* de uno y otro año. Finalmente, puede verse un resultado de la ejecución del cuaderno de *R* en el documento `R notebook.pdf` que se encuentra en la carpeta `Documentos`.
+El *notebook* de *R*, `C_Aplicación_k-Medias_en_R.Rmd`, sirve para la aplicación del algoritmo de k-Medias aplicado a un apellido concreto. Ejecuta k-Medias para las entradas correspondiente a 1698 y las de 1773. Además, compara los *clusters* de uno y otro año. Hay que mencionar, también, que se usa el método heurístico del codo para ajustar el hiperparámetro k, de número de grupos; para más información vea esta [página web](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/). Finalmente, puede verse un resultado de la ejecución del cuaderno de *R* en el documento `R notebook.pdf` que se encuentra en la carpeta `Documentos`.
 
 ## *Notebooks* `Z_...`
 Los *notebooks* cuyo título empiezan por *Z_* no están pensados para ejecutarse independientemente como `A_...`, `B_...` y `C_...`. Por el contrario, están pensados para albergar funciones y variables de ayuda necesarias para el uso de `A_Procesar_Guardar.ipynb` y `B_Añadir_Etiquetas.ipynb`.
