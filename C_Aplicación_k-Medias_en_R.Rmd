@@ -115,7 +115,8 @@ library(matrixStats)
 ```
 ```{r}
 medianas1698 <- rowMedians(w1698)
-plot(medianas1698, type='o')
+plot(medianas1698, type='o', xlab='Número de centros',
+     ylab='Función de coste, WSS')
 ```
 #### Ecogemos un valor de k
 Usaremos el método del "codo": para ello hemos representado la mediana de la WSS (within-cluster sum of squares: suma de cuadrados dentro del cluster) de los experimentos. El número de centros, k, sugerido por el método es el entero más pequeño para el que la figura anterior se aplana. Haciendo una similitud entre la figura de las medias y un brazo, el valor de k "correponde con la posición del codo". Para más información vea esta [página web](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/).
@@ -146,7 +147,8 @@ for (j in 1:M)
   }
 }
 medianas1773 <- rowMedians(w1773)
-plot(medianas1773, type='o')
+plot(medianas1773, type='o', xlab='Número de centros',
+     ylab='Función de coste, WSS')
 ```
 Claramente el valor k del "codo" es 4, aunque en muchas ocasiones se puede ser flexible con este método y escoger un k similar, que se adapte mejor a la agrupación visual de los datos.
 
