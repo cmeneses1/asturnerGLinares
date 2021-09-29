@@ -95,7 +95,7 @@ Y1773 <- subdata1773$Localidad
 El experimento consiste en calcular k-Medias para una cantidad de centros de 1 a 10. El experimento se repetirá 100 veces. Primero lo haremos para los datos del 1698.
 ```{r}
 M <- 100
-N <- 10
+N <- 9
 w1698 <- matrix(rep(0, N), nrow=N, ncol=M) 
 for (j in 1:M)
 {
@@ -107,13 +107,20 @@ for (j in 1:M)
 }
 ```
 
-Para cada número de centros, se representa:
+Para cada número de centros, se representa la mediana, con la que se aplicará el método de heurístico, explicado a continuación; pero también representamos el histograma de dicho número de grupos o centros.
 
-#### La media
+#### La mediana
 ```{r}
-medias1698 <- rowMeans(w1698)
-plot(medias1698, type='o')
+library(matrixStats)
 ```
+```{r}
+medianas1698 <- rowMedians(w1698)
+plot(medianas1698, type='o')
+```
+#### Ecogemos un valor de k
+Usaremos el método del "codo": para ello hemos representado la mediana de la WSS (within-cluster sum of squares: suma de cuadrados dentro del cluster) de los experimentos. El número de centros, k, sugerido por el método es el entero más pequeño para el que la figura anterior se aplana. Haciendo una similitud entre la figura de las medias y un brazo, el valor de k "correponde con la posición del codo". Para más información vea esta [página web](https://www.geeksforgeeks.org/elbow-method-for-optimal-value-of-k-in-kmeans/).
+
+Además, véase que hemos hecho el experimento varias veces para asegurar la coherencia de los resultados. En efecto, al representar el histograma de k="valor del codo" observamos que la mayoría de veces se obtiene un WSS bajo, lo que sugiere una solución estable. Si se representa el mismo histograma para un k menor, se observa una variabilidad mucho más grande.
 
 
 #### El histograma de un centro
@@ -123,10 +130,6 @@ ncentros1698 <- 3
 hist(w1698[ncentros1698,])
 ```
 
-#### Ecogemos un valor de k
-Usaremos el método del "codo": para ello hemos representado la media de la WSS (within-cluster sum of squares: suma de cuadrados dentro del cluster) de los experimentos. El número de centros, k, sugerido por el método es el entero más pequeño para el que la figura anterior se aplana. Haciendo una similitud entre la figura de las medias y un brazo, el valor de k "correponde con la posición del codo".
-
-Además, véase que hemos hecho el experimento varias veces para asegurar la coherencia de los resultados. En efecto, al representar el histograma de k="valor del codo" observamos que la mayoría de veces se obtiene un WSS bajo, lo que sugiere una solución estable. Si se representa el mismo histograma para un k menor, se observa una variabilidad mucho más grande.
 
 #### Repetición del proceso para el censo de 1773
 ```{r}
@@ -142,10 +145,10 @@ for (j in 1:M)
     w1773[i, j] <- kc1773$tot.withinss
   }
 }
-medias1773 <- rowMeans(w1773)
-plot(medias1773, type='o')
+medianas1773 <- rowMedians(w1773)
+plot(medianas1773, type='o')
 ```
-Claramente el valor k del "codo" es 2, pero podemos ser flexibles con este método y escoger k=3, que se adapta mejor a la agrupación visual de los datos.
+Claramente el valor k del "codo" es 4, aunque en muchas ocasiones se puede ser flexible con este método y escoger un k similar, que se adapte mejor a la agrupación visual de los datos.
 
 ```{r}
 ncentros1773 <- 4
