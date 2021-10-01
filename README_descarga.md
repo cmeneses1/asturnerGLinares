@@ -1,5 +1,5 @@
 # Descarga y procesamiento de la obra de García Linares
-El padrón de García Linares puede encontrarse segmentada en varios tomos de la revista *Hidalguía:  La  Revista de Genealogía,  Nobleza  y  Armas*. Puede descargarse en las siguientes enlaces:
+El padrón de García Linares puede encontrarse segmentada en varios tomos de la revista *Hidalguía:  La  Revista de Genealogía,  Nobleza  y  Armas*. Puede descargarse en los siguientes enlaces:
 - [Parte 1](https://www.edicioneshidalguia.es/?product=revista-no-240-8-linajes-asturianos-padrones-del-concejo-de-allande-de-1698-y-1773)
 - [Parte 2](https://www.edicioneshidalguia.es/?product=revista-no-242-8-linajes-asturianos-padrones-del-concejo-de-allande-de-1698-y-1773)
 - [Parte 3](https://www.edicioneshidalguia.es/?product=revista-no-243-4-linajes-asturianos-padrones-del-concejo-de-allande-de-1698-y-1773)
