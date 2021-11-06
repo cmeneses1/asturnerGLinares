@@ -73,7 +73,7 @@ filtro <- function(data, nombres, valores)
 
 ### Aplicamos el filtro
 ```{r}
-patrón <- c("Rúa", "Rua", "rua", "rúa")
+patrón <- c("Álvarez", "Alvarez", "álvarez", "alvarez")
 subdata1698 <- filtro(data, c("Nombre", "Año"), list(patrón, c("1698")))
 subdata1773 <- filtro(data, c("Nombre", "Año"), list(patrón, c("1773")))
 ```
@@ -115,7 +115,7 @@ library(matrixStats)
 ```
 ```{r}
 medianas1698 <- rowMedians(w1698)
-plot(medianas1698, type='o', xlab='Número de centros',
+plot(medianas1698, type='o', xlab='Número de centros, k',
      ylab='Función de coste, WSS')
 ```
 #### Ecogemos un valor de k
@@ -147,13 +147,13 @@ for (j in 1:M)
   }
 }
 medianas1773 <- rowMedians(w1773)
-plot(medianas1773, type='o', xlab='Número de centros',
+plot(medianas1773, type='o', xlab='Número de centros, k',
      ylab='Función de coste, WSS')
 ```
 Claramente el valor k del "codo" es 4, aunque en muchas ocasiones se puede ser flexible con este método y escoger un k similar, que se adapte mejor a la agrupación visual de los datos.
 
 ```{r}
-ncentros1773 <- 4
+ncentros1773 <- 5
 hist(w1773[ncentros1773, ])
 ```
 
@@ -199,7 +199,7 @@ leaflet(subdata1698) %>% addTiles() %>%
              lat = ~coords1698$Latitud,
              weight = 5,
              col= ~pal(c(1:ncentros1698)),
-             label = c(1:ncentros1698),
+             label = as.character(c(1:ncentros1698)),
              labelOptions = labelOptions(noHide = F, textOnly = FALSE),
              fillOpacity = 0.25,
              opacity = 1,
@@ -226,7 +226,7 @@ leaflet(subdata1773) %>% addTiles() %>%
              lat = ~coords1773$Latitud,
              weight = 5,
              col= ~pal(c(1:ncentros1773)),
-             label = c(1:ncentros1773),
+             label = as.character(c(1:ncentros1773)),
              labelOptions = labelOptions(noHide = F, textOnly = FALSE),
              fillOpacity = 0.25,
              opacity = 1,
@@ -240,7 +240,8 @@ leaflet(subdata1773) %>% addTiles() %>%
   addLabelOnlyMarkers(lng = ~subdata1773$Longitud,
                       lat = ~subdata1773$Latitud,
                       label = ~subdata1773$Localidad,
-                      labelOptions = labelOptions(noHide = T, textOnly = TRUE)) 
+                      labelOptions = labelOptions(noHide = T, textOnly = TRUE) 
+  )
 ```
 
 ### Ahora se representan los clusters de 1698 en rojo y los de 1773 en azul
