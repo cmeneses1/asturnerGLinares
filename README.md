@@ -15,6 +15,9 @@ Este código diferentes *notebooks* de *Python 3* y de *R* que pretenden extraer
 
 No importa si no dispone del censo al completo en TXT, todo el código en este repositorio puede ejecutarse con un pequeño extracto denominado `PadronOCRPrueba.txt`. No obstante, en este repositorio se detalla cómo descargar y procesar el censo en PDF al completo. El código funciona en ambos casos.
 
+### Video explicativo
+A continuación un video que muestra las diferentes fases del proceso de procesado (extractado del congreso CUICIID 2021, duración 10 minutos): https://youtu.be/-7MS2VsixsE?t=4789
+
 ## Descarga de la obra de García Linares
 Si no se dispone de la obra de García Linares, *Linajes Asturianos. Padrones del Concejo de Allande*, en TXT puede seguir los pasos detallados en [README_descarga.md](https://github.com/cmeneses1/asturnerGLinares/blob/main/README_descarga.md) para obtener una copia PDF para uso personal y transformarla en un documento TXT.
 
