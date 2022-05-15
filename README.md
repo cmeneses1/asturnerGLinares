@@ -1,3 +1,5 @@
+_Nota: Este código forma parte de mi trabajo de fin del grado en matemáticas titulado "Inteligencia artificial aplicada a humanidades digitales", dirigido por Beatriz González Pérez y Óscar de Gregorio Vicente del departamento de estadística e Investigación operativa de la universidad Complutense de Madrid._
+
 # asturnerGLinares
 Código para la resolución del problema NER y extracción automática de información en un censo de linajes asturianos. Para ejecutar este código es necesario tener instaladas las librerías siguientes:
 - Python 3
